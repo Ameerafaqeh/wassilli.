@@ -1,0 +1,769 @@
+:root {
+    /* الألوان الأساسية لـ وصّلي */
+    --primary-color: #6A1B9A;
+    /* بنفسجي غامق/نيلي - للنصوص الرئيسية والخلفيات الداكنة */
+    --accent-color: #9C27B0;
+    /* بنفسجي متوسط - للأزرار والتأكيد */
+    --light-bg-color: #F3E5F5;
+    /* بنفسجي فاتح/لافندر - لخلفيات الأقسام الفاتحة */
+    --text-color: #333333;
+    /* لون النص الأساسي */
+    --white-color: #FFFFFF;
+}
+
+/* التنسيق العام والخطوط */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* يفضل استخدام خط عربي جذاب */
+    background-color: var(--white-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    direction: rtl;
+    /* دعم اللغة العربية */
+    text-align: right;
+}
+
+/* شريط التنقل (Header) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--white-color);
+    border-bottom: 3px solid var(--light-bg-color);
+    /* فصل خفيف */
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* زر الحث على الإجراء (Call to Action Button) */
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* قسم البطل (Hero Section) - الصفحة الرئيسية */
+.hero-section {
+    background-color: var(--light-bg-color);
+    /* استخدام البنفسجي الفاتح للخلفية */
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: var(--text-color);
+}
+
+.image-placeholder {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: var(--primary-color);
+    /* خلفية بلون الشعار */
+    border-radius: 15px;
+    /* في الواقع، سيتم استبدال هذا برسم السيارة والأشخاص من البوربوينت */
+}
+
+/* قسم النظرة العامة السريعة (Quick Overview) */
+.quick-overview {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.quick-overview h2 {
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.overview-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--white-color);
+    border: 1px solid var(--light-bg-color);
+    border-radius: 8px;
+    padding: 25px;
+    width: 45%;
+    /* أو حسب التفضيل */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: right;
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* التذييل (Footer) */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+/* ===== تنسيق الصفحات الأخرى (إضافة عند الحاجة) ===== */
+
+/* صفحة عن وصّلي (About) */
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--accent-color);
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+
+.problem-list {
+    background-color: var(--light-bg-color);
+    padding: 40px 5%;
+    margin: 20px 0;
+}
+
+.problem-list ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.problem-list li {
+    background-color: var(--white-color);
+    padding: 15px;
+    border-right: 5px solid var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيقات صفحة التواصل */
+.contact-page {
+    text-align: center;
+}
+
+.contact-info-section {
+    padding: 30px 5%;
+    background-color: var(--light-bg-color);
+    /* بنفسجي فاتح */
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.detail-item {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-item h3 {
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.detail-item .icon {
+    font-size: 2em;
+    color: var(--accent-color);
+}
+
+.detail-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* قسم الفريق */
+.team-section {
+    padding: 20px 5%;
+}
+
+.team-quote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin: 20px auto 40px;
+    max-width: 800px;
+    padding: 20px;
+    border-right: 5px solid var(--accent-color);
+    border-left: 5px solid var(--accent-color);
+    background-color: var(--light-bg-color);
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.member-card {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--white-color);
+    border: 1px solid var(--light-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.member-photo-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: var(--light-bg-color);
+    /* لون بنفسجي فاتح كخلفية للصورة */
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    border: 3px solid var(--accent-color);
+}
+
+.member-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+/* تنسيقات خاصة بصفحة من نحن */
+
+.about-us-page {
+    /* للحفاظ على اتساق الصفحة */
+    text-align: right;
+}
+
+.company-intro {
+    background-color: var(--light-bg-color);
+    padding: 40px 5%;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.company-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+/* تنسيق قسم الرؤية والرسالة */
+.mission-vision-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.mission-card,
+.vision-card {
+    background-color: var(--white-color);
+    border: 3px solid var(--accent-color);
+    /* إطار بلون التأكيد */
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    min-width: 40%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission-card h3,
+.vision-card h3 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--light-bg-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+/* تنسيق بيان المشكلة (Problem Statement) */
+.problem-statement-section {
+    padding: 30px 5%;
+    text-align: right;
+}
+
+.problem-list {
+    background-color: var(--light-bg-color);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.problem-list p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.problem-list ul {
+    list-style: none;
+    /* إزالة التنقيط الافتراضي */
+    padding: 0;
+}
+
+.problem-list li {
+    background-color: var(--white-color);
+    padding: 15px;
+    border-right: 5px solid var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+    /* الألوان الأساسية لـ وصّلي */
+    --primary-color: #6A1B9A;
+    /* بنفسجي غامق/نيلي - للنصوص الرئيسية والخلفيات الداكنة */
+    --accent-color: #9C27B0;
+    /* بنفسجي متوسط - للأزرار والتأكيد */
+    --light-bg-color: #F3E5F5;
+    /* بنفسجي فاتح/لافندر - لخلفيات الأقسام الفاتحة */
+    --text-color: #333333;
+    /* لون النص الأساسي */
+    --white-color: #FFFFFF;
+}
+
+/* التنسيق العام والخطوط */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    direction: rtl;
+    /* دعم اللغة العربية */
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--primary-color);
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+
+.page-content {
+    padding: 20px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* شريط التنقل (Header) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--white-color);
+    border-bottom: 3px solid var(--light-bg-color);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* زر الحث على الإجراء (CTA) */
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* التذييل (Footer) */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+/* ==================================== */
+/* 1. تنسيق الصفحة الرئيسية (index.html) */
+/* ==================================== */
+
+.hero-section {
+    background-color: var(--light-bg-color);
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.image-placeholder {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    /* مكان لصورة التوصيل أو الشعار */
+}
+
+/* ==================================== */
+/* 2. تنسيق صفحة من نحن (about.html) */
+/* ==================================== */
+
+.company-intro {
+    background-color: var(--light-bg-color);
+    padding: 40px 5%;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.company-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.mission-vision-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.mission-card,
+.vision-card {
+    border: 3px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    min-width: 45%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission-card h3,
+.vision-card h3 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--light-bg-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.problem-list ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.problem-list li {
+    background-color: var(--white-color);
+    padding: 15px;
+    border-right: 5px solid var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================================== */
+/* 3. تنسيق صفحة الحل والقيمة (solution.html) */
+/* ==================================== */
+
+.solution-details {
+    text-align: center;
+    background-color: var(--light-bg-color);
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.value-proposition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.value-card {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 5px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+.value-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+/* ==================================== */
+/* 4. تنسيق صفحة تواصل معنا (contact.html) */
+/* ==================================== */
+
+.contact-info-section {
+    padding: 30px 5%;
+    background-color: var(--light-bg-color);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.detail-item {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-item h3 {
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.detail-item .icon {
+    font-size: 2em;
+    color: var(--accent-color);
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.member-card {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid var(--light-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.member-photo-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: var(--light-bg-color);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    border: 3px solid var(--accent-color);
+}
+
+/* التنسيق الجديد لصور أعضاء الفريق */
+.member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* لجعل الصورة دائرية */
+    object-fit: cover;
+    /* لضمان ملء الصورة للحيز دون تشوه */
+    margin: 0 auto 10px;
+    display: block;
+    border: 3px solid var(--accent-color);
+    /* إطار بلون المشروع */
+}
+
+/* التنسيق الجديد لصورة البطل (Hero Image) */
+.hero-image {
+    width: 100%;
+    max-width: 600px;
+    /* سيبقى العرض الأقصى 600 بكسل */
+    /* قم بإزالة السطر التالي: height: 300px; */
+    height: auto;
+    /* هذا يسمح للارتفاع بالتعديل التلقائي */
+    margin: 20px auto;
+    display: block;
+    border-radius: 15px;
+    object-fit: cover;
+    /* يمكنك الاحتفاظ بها إذا أردت التأكد من ملء المساحة (رغم أن auto height يقلل الحاجة إليها) */
+    border: 3px solid var(--accent-color);
+}
+
+/* ==================================== */
+/* تنسيقات صفحة التسجيل (Signup Page) */
+/* ==================================== */
+
+.signup-page-content {
+    text-align: center;
+}
+
+.email-signup-container {
+    background-color: var(--light-bg-color);
+    /* استخدام لون فاتح مميز للخلفية */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* ظل أكبر لبروز الصفحة */
+}
+
+.email-signup-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.email-signup-container p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    /* جعل الحقول والزر فوق بعضها */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.signup-form input[type="email"],
+.signup-form input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    direction: rtl;
+    text-align: right;
+    transition: border-color 0.3s;
+    width: 100%;
+    /* جعل حقول الإدخال بعرض كامل */
+}
+
+.signup-form input:focus {
+    border-color: var(--accent-color);
+    outline: 2px solid var(--accent-color);
+    /* إطار خارجي عند التركيز */
+}
+
+.signup-form .cta-button {
+    padding: 12px;
+    width: 100%;
+    /* جعل الزر بعرض كامل */
+    font-size: 1.1em;
+}
+
+.email-signup-container small {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+    font-size: 0.85em;
+}
