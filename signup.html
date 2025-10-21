@@ -6,6 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>وصّلي | ابدأ الإرسال</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* تنسيقات الصفحة والصورة */
+        .signup-page-content {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .signup-image {
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .signup-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .signup-text {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #444;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,16 +52,11 @@
         <h1 class="section-title">ابدأ رحلتك مع وصــلّــي</h1>
 
         <section class="email-signup-container">
-            <h2>لنطلق فرص التوصيل معاً!</h2>
-            <p>سجل بريدك الإلكتروني لتكون أول من يعرف عن إطلاق الخدمة، أو للحصول على عرض تقديمي مخصص لشركتك.</p>
-
-            <form action="/subscribe-to-wassilli" method="POST" class="signup-form">
-                <input type="text" name="name" placeholder="الاسم الكامل (اختياري)">
-                <input type="email" name="email" placeholder="البريد الإلكتروني المطلوب*" required>
-                <button type="submit" class="cta-button">تسجيل وإرسال</button>
-            </form>
-
-            <small>بالضغط على "تسجيل وإرسال"، أنت توافق على تلقي التحديثات والإشعارات من وصّلي.</small>
+            <!-- الصورة تصبح رابطًا للتسجيل -->
+            <a href="https://forms.gle/your-registration-link" target="_blank">
+                <img src="images/wassilli-start.png" alt="باركود التسجيل في وصّلي" class="signup-image">
+            </a>
+            <p class="signup-text">امسح الباركود أو اضغط عليه للتسجيل الآن 🚀</p>
         </section>
     </main>
 
